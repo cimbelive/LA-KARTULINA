@@ -1,0 +1,266 @@
+
+    :root {
+      --tst: bottom 0.5s ease 0s;
+      --dark: #E6E6E6EE;
+    }
+
+    /* Reset básico para Google Sites */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #8B5CF6 0%, #F8BBD9 50%, #E879F9 100%);
+      background-attachment: fixed;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 100%;
+      height: 100vh;
+      min-height: 600px;
+      background: linear-gradient(135deg, #8B5CF6 0%, #F8BBD9 50%, #E879F9 100%);
+      background-attachment: fixed;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+      padding: 50px 0;
+    }
+
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 500px;
+      height: 800px;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      cursor: grab;
+      transition: transform 0.3s ease;
+    }
+
+    .swiper-slide:active {
+      cursor: grabbing;
+    }
+
+    /* Efectos 3D y sombras */
+    .swiper-slide-shadow-left {
+      background-image: linear-gradient(to left, #000, transparent) !important;
+      border-right: 1px solid #000;
+      border-radius: 10px;
+    }
+
+    .swiper-slide-shadow-right {
+      background-image: linear-gradient(to right, #000, transparent) !important;
+      box-shadow: 0 0 0 1px #000;
+      border-radius: 10px;
+    }
+
+    /* Paginación personalizada */
+    .swiper-pagination {
+      bottom: 20px !important;
+    }
+
+    .swiper-pagination-bullet {
+      background: #696969 !important;
+      transition: all 0.5s ease 0s;
+      border-radius: 8px;
+      opacity: 0.7;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: #ffc107 !important;
+      width: 30px !important;
+      opacity: 1;
+    }
+
+    /* Información de las imágenes */
+    .info {
+      position: absolute;
+      width: calc(100% + 2px);
+      height: calc(50% + 2px);
+      text-align: center;
+      background: linear-gradient(180deg, transparent 0, rgba(0,0,0,0.5) 50px), 
+                  linear-gradient(180deg, transparent, rgba(0,0,0,0.6));
+      padding: 15px;
+      padding-top: 70px;
+      left: 0;
+      bottom: calc(-100% - 3px);
+      box-sizing: border-box;
+      transition: var(--tst);
+    }
+
+    .swiper-slide-active .info {
+      bottom: 0;
+      transition: var(--tst);
+    }
+
+    .info span {
+      width: 100%;
+      margin: 0.25em 0;
+      display: inline-block;
+      padding: 0.55em 0.5em 0.55em 4em;
+      box-sizing: border-box;
+      color: var(--dark);
+      text-align: left;
+      position: relative;
+      text-transform: uppercase;
+      font-size: 12px;
+      border-radius: 2em;
+      transition: all 0.3s ease;
+    }
+
+    .info span:hover {
+      background: rgba(0,0,0,0.5);
+      filter: invert(1);
+      transform: translateX(5px);
+    }
+
+    .info span:before,
+    .info span:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: rgba(255,255,255,0.5);
+      height: 100%;
+      max-width: 2em;
+    }
+
+    /* Iconos personalizados */
+    /* Climber icon */
+    .info span:nth-child(1):before {
+      background: radial-gradient(circle at 50% 50%, var(--dark) 2px, transparent 3px 150%);
+      width: 7px;
+      height: 6px;
+      border-radius: 100% 100% 100% 40%;
+      left: 16px;
+      top: 2px;
+      border: 3px solid var(--dark);
+      border-top-color: transparent;
+      transform: rotate(29deg);
+    }
+
+    .info span:nth-child(1):after {
+      background: linear-gradient(180deg, var(--dark) 1px, transparent 1px 150%);
+      width: 4px;
+      height: 7px;
+      border-radius: 100% 50% 100% 0%;
+      left: 15px;
+      top: 13px;
+      border: 3px solid var(--dark);
+      border-bottom-color: transparent;
+      transform: rotate(-1deg);
+    }
+
+    /* Photo icon */
+    .info span:nth-child(2):before {
+      background: radial-gradient(circle at 50% 42%, var(--dark) 2px, transparent 3px 4px, var(--dark) 5px 100%);
+      width: 20px;
+      height: 13px;
+      left: 11px;
+      top: 8px;
+      border-radius: 2px;
+    }
+
+    .info span:nth-child(2):after {
+      border: 10px solid transparent;
+      border-width: 0px 2px 4px 2px;
+      border-bottom-color: var(--dark);
+      width: 10px;
+      background: transparent;
+      height: 0px;
+      left: 14px;
+      top: 5px;
+    }
+
+    /* Route icon */
+    .info span:nth-child(3):before {
+      width: 22px;
+      height: 22px;
+      left: 11px;
+      top: 3px;
+      background: 
+        radial-gradient(circle at 60% 50%, var(--dark) 1px, transparent 2px 100%),
+        radial-gradient(circle at 37% 70%, var(--dark) 1px, transparent 2px 100%),
+        radial-gradient(circle at 52% 64%, var(--dark) 1px, transparent 2px 100%),
+        radial-gradient(circle at 45% 42%, var(--dark) 1px, transparent 2px 100%),
+        radial-gradient(circle at 49% 25%, var(--dark) 1px, transparent 2px 100%),
+        radial-gradient(circle at 61% 15%, var(--dark) 1px, transparent 2px 100%);
+    }
+
+    /* Sector icon */
+    .info span:nth-child(4):before {
+      border: 10px solid transparent;
+      height: 0;
+      border-bottom-color: var(--dark);
+      border-width: 0 6px 10px 6px;
+      left: 12px;
+      top: 10px;
+    }
+
+    .info span:nth-child(4):after {
+      border: 10px solid transparent;
+      height: 0;
+      border-bottom-color: var(--dark);
+      border-width: 0 6px 15px 6px;
+      left: 18px;
+      top: 5px;
+    }
+
+    /* Zone icon */
+    .info span:nth-child(5):before {
+      width: 16px;
+      height: 16px;
+      border-radius: 100%;
+      left: 13px;
+      top: 3px;
+      background: radial-gradient(circle at 50% 50%, var(--dark) 2px, transparent 3px 4px, var(--dark) 5px 100%);
+    }
+
+    .info span:nth-child(5):after {
+      border: 10px solid transparent;
+      height: 0;
+      border-top-color: var(--dark);
+      border-width: 8px 6px 0 6px;
+      left: 15px;
+      top: 16px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .swiper-slide {
+        width: 300px;
+        height: 400px;
+      }
+      
+      .info {
+        padding-top: 50px;
+      }
+      
+      .info span {
+        font-size: 11px;
+        padding: 0.4em 0.4em 0.4em 3.5em;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .swiper-slide {
+        width: 250px;
+        height: 600px;
+      }
+      
+      .swiper {
+        padding: 30px 0;
+      }
+    }

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CATALOGO</title>
+  
+  <!-- Swiper CSS (solo una versión) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  
+  <!-- Tu CSS personalizado -->
+  <link rel="stylesheet" href="ESTILOS2.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <!--LA SIRENITA -->
+        <div class="swiper-slide" style="background-image:url(https://i.imgur.com/YtfHP7X.png)" >
+          <div class="info">
+            <span title="Climber">LA SIRENITA</span>
+            <span title="Photo">LA SIRENITA</span>
+            <span title="Route">ARIEL(7b)</span>
+            <span title="Sector">FORMATO PDF</span>
+            <span title="Zone">VIDEO</span>
+          </div>
+        </div>
+        
+        <div class="swiper-slide" style="background-image:url(https://imgur.com/Y05cP8X.png)">
+          <div class="info">
+            <span title="Climber">Josetxu López</span>
+            <span title="Photo">Uge Garcia</span>
+            <span title="Route">Normal (Ae)</span>
+            <span title="Sector">El Caliz</span>
+            <span title="Zone">La Pedriza</span>
+          </div>
+        </div>
+        
+                <!-- SLIDE CON VIDEO - Ejemplo 1 -->
+        <div class="swiper-slide video-slide" data-video-id="video1">
+          <video loop muted playsinline preload="metadata">
+            <source src="https://i.imgur.com/3j3KDla.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5
+          </video>
+          <div class="play-button"</div>
+          <div class="info">
+            <span>VIDEO CUMPLEAÑOS</span>
+            <span>FORMATO VIDEO MP4</span>
+            <span>Click para reproducir</span>
+            <span>PRECIO 200</span>
+          </div>
+        </div>
+        
+        <div class="swiper-slide" style="background-image:url(https://imgur.com/wjjU616.png)">
+          <div class="info">
+            <span title="Climber">Aitor Saz</span>
+            <span title="Photo">Tximo</span>
+            <span title="Route">Oscar & Raul (6a)</span>
+            <span title="Sector">Hueco de las Hoces</span>
+            <span title="Zone">La Pedriza</span>
+          </div>
+        </div>
+        
+        <div class="swiper-slide" style="background-image:url(https://imgur.com/iqY9rkN.png)">
+          <div class="info">
+            <span title="Climber">Jarutxi Mora</span>
+            <span title="Photo">Fernando Bulnes</span>
+            <span title="Route">Gallego (V+)</span>
+            <span title="Sector">Cueva de la Mora</span>
+            <span title="Zone">La Pedriza</span>
+          </div>
+        </div>
+        
+        <div class="swiper-slide" style="background-image:url(https://imgur.com/ifitrPL.png)">
+          <div class="info">
+            <span title="Climber">Nacho Ruiz</span>
+            <span title="Photo">Josetxu López</span>
+            <span title="Route">Chimenea (6a)</span>
+            <span title="Sector">La Tortuga</span>
+            <span title="Zone">La Pedriza</span>
+          </div>
+        </div>
+        
+        <div class="swiper-slide" style="background-image:url(https://imgur.com/4IPFmHp.png)">
+          <div class="info">
+            <span title="Climber">Marino</span>
+            <span title="Photo">Josetxu López</span>
+            <span title="Route">Blues de los ojos bonitos (6a+)</span>
+            <span title="Sector">Tres Coronas</span>
+            <span title="Zone">La Pedriza</span>
+          </div>
+        </div>
+        
+        <div class="swiper-slide" style="background-image:url(https://imgur.com/a/9l3Hy5K.png)">
+          <div class="info">
+            <span title="Climber">Josetxu & Uge</span>
+            <span title="Photo">Antonio Montes</span>
+            <span title="Route">El Capuchon (6a/A1)</span>
+            <span title="Sector">El Sarcofago</span>
+            <span title="Zone">La Pedriza</span>
+          </div>
+        </div>
+        
+        <div class="swiper-slide" style="background-image:url(https://imgur.com/IaQNnzi.png)">
+          <div class="info">
+            <span title="Climber">Eloy Atajos</span>
+            <span title="Photo">Josetxu López</span>
+            <span title="Route">Rosario (Vº)</span>
+            <span title="Sector">Cueva de la Mora</span>
+            <span title="Zone">La Pedriza</span>
+          </div>
+        </div>
+        
+        <div class="swiper-slide" style="background-image:url(https://imgur.com/PNZQTrH.png)">
+          <div class="info">
+            <span title="Climber">Indio</span>
+            <span title="Photo">Jarutxi Mora</span>
+            <span title="Route">Me pesa hasta el aire (A2/A3?)</span>
+            <span title="Sector">Risco de la Dehesilla</span>
+            <span title="Zone">La Pedriza</span>
+          </div>
+        </div>
+        
+        <div class="swiper-slide" style="background-image:url(https://imgur.com/ba05AGY.png)">
+          <div class="info">
+            <span title="Climber">Krispin Talavera</span>
+            <span title="Photo">Josetxu López</span>
+            <span title="Route">Anónima (6c)</span>
+            <span title="Sector">Tres Coronas</span>
+            <span title="Zone">La Pedriza</span>
+          </div>
+        </div>
+        
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+  <!-- Swiper JS (después del contenido HTML) -->
+  <script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
+  
+  <!-- Tu JavaScript personalizado (después de Swiper) -->
+  <script src="java.js"></script>
+  
+</body>
+</html>

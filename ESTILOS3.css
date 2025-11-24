@@ -1,0 +1,64 @@
+
+/* Reset y estilos para Google Sites */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: linear-gradient(#e6cae2, #ca7efc) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  /* Asegurar que ocupe todo el espacio en Google Sites */
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+/* Canvas debe ocupar todo el espacio disponible */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 1;
+  display: block;
+}
+
+.text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-size: clamp(2rem, 8vw + 1rem, 12rem);
+  color: rgba(255, 255, 255, 0.3);
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  letter-spacing: 0.1em;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Estilos específicos para Google Sites */
+/* Eliminar márgenes y padding que Google Sites pueda añadir */
+.sites-canvas-main,
+.sites-layout-hbox,
+.sites-layout-vbox {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Asegurar que el contenedor padre tenga altura completa */
+#sites-canvas {
+  height: 100vh !important;
+}
